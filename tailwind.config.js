@@ -6,7 +6,7 @@ export const content = ["./src/**/*.{html,js}"];
 export const theme = {
     extend: {
         fontFamily: {
-            sans: ["Inter var", ..._fontFamily.sans],
+            sans: ["Space Mono", ..._fontFamily.sans],
         },
     },
 };

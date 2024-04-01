@@ -48,14 +48,52 @@ export default function App() {
                                     <div className="text-2xl font-bold">
                                         Resources
                                     </div>
-                                    <div className="text-sm">
+                                    <div className="text-xs">
                                         Scroll down this page to view commands,
                                         general info, and contact info.
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-2 gap-2 pt-2">
-                                    <div>left</div>
-                                    <div>right</div>
+                                    <div>
+                                        <ul>
+                                            <li key="about">
+                                                <a
+                                                    href="#about"
+                                                    className="hover:font-bold"
+                                                >
+                                                    About
+                                                </a>
+                                            </li>
+                                            <li key="commands">
+                                                <a
+                                                    href="#commands"
+                                                    className="hover:font-bold"
+                                                >
+                                                    Commands
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <ul>
+                                            <li key="Contact">
+                                                <a
+                                                    href="#contact"
+                                                    className="hover:font-bold"
+                                                >
+                                                    Contact
+                                                </a>
+                                            </li>
+                                            <li key="add_bot">
+                                                <a
+                                                    href="#commands"
+                                                    className="hover:font-bold"
+                                                >
+                                                    Add Bot to Server
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                             <div className="bg-green-300 rounded-xl flex flex-col justify-center hover:cursor-pointer hover:scale-105">

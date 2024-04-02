@@ -1,6 +1,48 @@
 import { PlusIcon } from "@heroicons/react/24/solid";
 import { useEffect, useState } from "react";
 
+const commands = [
+  {
+    name: "✅enable",
+    description:
+      "Sets the main channel to where the bot will send automated messages",
+  },
+  {
+    name: "📈stats {RIOT ID}",
+    description: "Displays daily stats for Riot ID specified",
+    example: "!stats Username #NA1",
+  },
+  {
+    name: "📈stats weekly {RIOT ID}",
+    description: "Displays weekly stats for Riot ID specified",
+    example: "!stats weekly Username #NA1",
+  },
+  {
+    name: "📈stats monthly {RIOT ID}",
+    description: "Displays monthly stats for Riot ID specified",
+    example: "!stats monthly Username #NA1",
+  },
+  {
+    name: "💼report",
+    description:
+      "Displays weekly stat comparison for all summoners in your Guild",
+  },
+  {
+    name: "💼report monthly",
+    description:
+      "Displays monthly stat comparison for all summoners in your Guild",
+  },
+  {
+    name: "🎮summoners",
+    description: "Displays all summoners in your Guild",
+  },
+  {
+    name: "🎮summoners add {RIOT ID}",
+    description: "Adds a summoner to your Guild",
+    example: "!summoners add Username #NA1",
+  },
+];
+
 export default function App() {
   const [screenSize, setScreenSize] = useState({
     width: window.innerWidth,
@@ -24,8 +66,6 @@ export default function App() {
       });
     };
 
-    console.log(screenSize);
-
     window.addEventListener("resize", handleResize);
 
     // Cleanup function to remove event listener
@@ -33,6 +73,33 @@ export default function App() {
       window.removeEventListener("resize", handleResize);
     };
   }, [screenSize]);
+
+  const commandsList = (
+    <ul role="list" className="divide-y divide-gray-800">
+      {commands.map((command) => (
+        <li key={command.name} className="flex justify-between gap-x-6 py-5">
+          <div className="flex min-w-0 gap-x-4">
+            <div className="min-w-0 flex-auto">
+              <p className="text-lg font-semibold leading-6 text-gray-900">
+                {command.name}
+              </p>
+              <p
+                className="mt-1 text-base leading-5 text-black"
+                style={{ whiteSpace: "pre-wrap" }}
+              >
+                {command.description}
+              </p>
+              {command.example && (
+                <p className="text-base leading-5 text-black">
+                  <span className="font-bold">Example:</span> {command.example}
+                </p>
+              )}
+            </div>
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
 
   return (
     <div className="bg-white font-sans">
@@ -198,6 +265,16 @@ export default function App() {
               style={gifBackgroundStyle}
             ></div>
           )}
+        </div>
+        {/* Commands and Contact section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 mt-4 gap-x-2">
+          {/* commands */}
+          <div className="bg-green-300 rounded-xl p-6">
+            {/* title */}
+            <div className="text-3xl font-bold">Commands</div>
+            {/* commands list */}
+            {commandsList}
+          </div>
         </div>
       </div>
     </div>

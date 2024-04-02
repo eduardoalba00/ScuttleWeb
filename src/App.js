@@ -374,7 +374,7 @@ export default function App() {
         </div>
         {/* Examples and Commands section */}
         <div
-          className="grid grid-cols-1 lg:grid-cols-2 mt-4 gap-x-2"
+          className="grid grid-cols-1 lg:grid-cols-2 mt-4 gap-x-4"
           id="commands"
         >
           {/* examples */}

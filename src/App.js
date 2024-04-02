@@ -6,56 +6,74 @@ const commands = [
     name: "✅enable",
     description:
       "Sets the main channel to where the bot will send automated messages",
+    demoUrl: "./assets/enable_demo.gif",
   },
   {
     name: "📈stats {RIOT ID}",
     description: "Displays daily stats for Riot ID specified",
     example: "!stats Username #NA1",
+    demoUrl: "./assets/stats_demo.gif",
   },
   {
     name: "📈stats weekly {RIOT ID}",
     description: "Displays weekly stats for Riot ID specified",
     example: "!stats weekly Username #NA1",
+    demoUrl: "./assets/stats_weekly_demo.gif",
   },
   {
     name: "📈stats monthly {RIOT ID}",
     description: "Displays monthly stats for Riot ID specified",
     example: "!stats monthly Username #NA1",
+    demoUrl: "./assets/stats_monthly_demo.gif",
   },
   {
     name: "💼report",
     description:
       "Displays weekly stat comparison for all summoners in your Guild",
+    demoUrl: "./assets/report_demo.gif",
   },
   {
     name: "💼report monthly",
     description:
       "Displays monthly stat comparison for all summoners in your Guild",
+    demoUrl: "./assets/report_monthly_demo.gif",
   },
   {
     name: "🎮summoners",
     description: "Displays all summoners in your Guild",
+    demoUrl: "./assets/summoners_demo.gif",
   },
   {
     name: "🎮summoners add {RIOT ID}",
     description: "Adds a summoner to your Guild",
     example: "!summoners add Username #NA1",
+    demoUrl: "./assets/summoners_add_demo.gif",
   },
 ];
 
 export default function App() {
+  const [commandGif, setCommandGif] = useState("./assets/enable_demo.gif");
   const [screenSize, setScreenSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
   });
 
-  const gifBackgroundStyle = {
+  const mainGifBackgroundStyle = {
     backgroundImage: `url(${require("./assets/demo.gif")})`,
-    backgroundSize: "cover", // or 'contain' depending on your needs
+    backgroundSize: "cover",
     backgroundPosition: "left bottom",
     backgroundRepeat: "no-repeat",
-    height: "100%", // Adjust as needed
-    width: "100%", // Adjust as needed
+    height: "100%",
+    width: "100%",
+  };
+
+  const gifBackgroundStyle = {
+    backgroundImage: `url(${require(`${commandGif}`)})`,
+    backgroundSize: "cover",
+    backgroundPosition: "left bottom",
+    backgroundRepeat: "no-repeat",
+    height: "100%",
+    width: "100%",
   };
 
   useEffect(() => {
@@ -77,8 +95,11 @@ export default function App() {
   const commandsList = (
     <ul role="list" className="divide-y divide-gray-800">
       {commands.map((command) => (
-        <li key={command.name} className="flex justify-between gap-x-6 py-5">
-          <div className="flex min-w-0 gap-x-4">
+        <li key={command.name} className="flex justify-between gap-x-6">
+          <div
+            className="flex min-w-0 gap-x-4 bg-transparent hover:bg-green-200 hover:cursor-pointer rounded-xl p-4 my-4 hover:scale-105 ease-in duration-100"
+            onClick={() => setCommandGif(command.demoUrl)}
+          >
             <div className="min-w-0 flex-auto">
               <p className="text-lg font-semibold leading-6 text-gray-900">
                 {command.name}
@@ -170,7 +191,10 @@ export default function App() {
                           </a>
                         </li>
                         <li key="add_bot">
-                          <a href="#commands" className="hover:font-bold">
+                          <a
+                            href="https://discord.com/oauth2/authorize?client_id=1222960533523796089&permissions=17600776293376&scope=bot"
+                            className="hover:font-bold"
+                          >
                             Add Bot
                           </a>
                         </li>
@@ -178,22 +202,28 @@ export default function App() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-green-300 rounded-xl flex flex-col justify-center hover:cursor-pointer hover:scale-105">
+                <a
+                  className="bg-green-300 rounded-xl flex flex-col justify-center hover:cursor-pointer hover:scale-105"
+                  href="https://discord.com/oauth2/authorize?client_id=1222960533523796089&permissions=17600776293376&scope=bot"
+                >
                   <PlusIcon className="h-32 text-green-700 flex mx-auto" />
-                </div>
+                </a>
               </div>
             </div>
             {/* right side */}
             {screenSize.width >= 1024 && (
               <div
                 className="bg-gray-600 rounded-xl"
-                style={gifBackgroundStyle}
+                style={mainGifBackgroundStyle}
               ></div>
             )}
           </div>
         </div>
         {/* About section */}
-        <div className="flex flex-col bg-green-200 rounded-xl mt-4 p-6 gap-y-3">
+        <div
+          className="flex flex-col bg-green-200 rounded-xl mt-4 p-6 gap-y-3"
+          id="about"
+        >
           {/* title */}
           <div className="text-3xl font-bold">About</div>
           {/* Description */}
@@ -257,17 +287,19 @@ export default function App() {
               </div>
             </div>
           </div>
-
-          {/* demo gif */}
-          {screenSize.width < 1280 && (
+        </div>
+        {/* Examples and Commands section */}
+        <div
+          className="grid grid-cols-1 lg:grid-cols-2 mt-4 gap-x-2"
+          id="commands"
+        >
+          {/* examples */}
+          {screenSize.width >= 1024 && (
             <div
-              className="bg-gray-600 rounded-xl py-[200px] mt-4 md:py-[300px] lg:py-[350px]"
+              className="bg-gray-600 rounded-xl"
               style={gifBackgroundStyle}
             ></div>
           )}
-        </div>
-        {/* Commands and Contact section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 mt-4 gap-x-2">
           {/* commands */}
           <div className="bg-green-300 rounded-xl p-6">
             {/* title */}

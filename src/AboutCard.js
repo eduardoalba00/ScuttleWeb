@@ -36,8 +36,9 @@ function AboutCard() {
             </p>
 
             <p>
-              4. Wait 1-2 hours before Scuttle has retreived and updated the
-              data for all the Summoners in your Guild.
+              4. Wait until the start of the next hour before Scuttle has
+              retreived and updated the data for all the Summoners in your
+              Guild.
             </p>
           </div>
         </div>
@@ -52,8 +53,8 @@ function AboutCard() {
             </p>
 
             <p>
-              2. When a new summoner is added, you will need to wait about 1-2
-              hours for their info.
+              2. When a new summoner is added, you will need to wait until the
+              start of the next hour for their info.
             </p>
 
             <p>

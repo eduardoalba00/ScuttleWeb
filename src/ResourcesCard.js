@@ -84,7 +84,7 @@ function ResourcesCard({ open, setOpen }) {
     <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
       <div className="col-span-1 sm:col-span-2 bg-gray-100 rounded-xl p-6">
         <div>
-          <div className="text-2xl font-bold lg:text-4xl">Resources</div>
+          <h2 className="text-2xl font-bold lg:text-4xl">Resources</h2>
           <div className="text-[12px] sm:text-b md:text-base lg:text-lg">
             Scroll down this page to view commands, general info, and contact
             info.

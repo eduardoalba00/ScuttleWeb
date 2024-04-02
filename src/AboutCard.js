@@ -5,14 +5,14 @@ function AboutCard() {
       id="about"
     >
       {/* title */}
-      <div className="text-3xl font-bold">About</div>
+      <h2 className="text-3xl font-bold">About</h2>
       {/* Description */}
-      <div className="text-base">
+      <h3 className="text-base">
         Scuttle is a League of Legends discord bot for diplaying summoner match
         data. Some of the stats provided are Average Assists, Average Kill
         Participation, Average Gold per Minute, Average Damage to Champions, and
         many more.
-      </div>
+      </h3>
 
       {/* getting started and how it works */}
       <div className="grid grid-cols-1 sm:grid-cols-2 mt-2 gap-y-4 gap-x-4">
@@ -24,14 +24,14 @@ function AboutCard() {
             <p>1. Add Scuttle to your server.</p>
 
             <p>
-              2. Type <span className="font-bold">!enable</span> in the channel
+              2. Type <span className="font-bold">/enable</span> in the channel
               you wish to receive automated reports.
             </p>
 
             <p>
               3. Add summoners to your Guild using{" "}
               <span className="font-bold">
-                !summoners add &#123;Name&#125; #&#123;Tag&#125;
+                /summoners add &#123;Name&#125; #&#123;Tag&#125;
               </span>
             </p>
 

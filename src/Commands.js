@@ -8,7 +8,7 @@ const commands = [
     demoUrl: "./assets/enable_demo.gif",
   },
   {
-    name: "📈stats {RIOT ID}",
+    name: "📈stats daily {RIOT ID}",
     description: "Displays daily stats for Riot ID specified",
     example: "!stats Username #NA1",
     demoUrl: "./assets/stats_demo.gif",
@@ -26,19 +26,19 @@ const commands = [
     demoUrl: "./assets/stats_monthly_demo.gif",
   },
   {
-    name: "💼report",
+    name: "💼reports weekly",
     description:
       "Displays weekly stat comparison for all summoners in your Guild",
     demoUrl: "./assets/report_demo.gif",
   },
   {
-    name: "💼report monthly",
+    name: "💼reports monthly",
     description:
       "Displays monthly stat comparison for all summoners in your Guild",
     demoUrl: "./assets/report_monthly_demo.gif",
   },
   {
-    name: "🎮summoners",
+    name: "🎮summoners list",
     description: "Displays all summoners in your Guild",
     demoUrl: "./assets/summoners_demo.gif",
   },
@@ -100,7 +100,7 @@ function Commands({ screenSize }) {
       {/* commands */}
       <div className="bg-green-300 rounded-xl p-6">
         {/* title */}
-        <div className="text-3xl font-bold">Commands</div>
+        <h1 className="text-3xl font-bold">Commands</h1>
         {/* commands list */}
         {commandsList}
       </div>

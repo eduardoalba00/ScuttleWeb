@@ -1,6 +1,6 @@
 import { PlusIcon } from "@heroicons/react/24/solid";
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useRef, useState } from "react";
+import { Fragment, useRef } from "react";
 
 function ResourcesCard({ open, setOpen }) {
   const cancelButtonRef = useRef(null);

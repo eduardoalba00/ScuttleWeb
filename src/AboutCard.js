@@ -18,7 +18,7 @@ function AboutCard() {
       <div className="grid grid-cols-1 sm:grid-cols-2 mt-2 gap-y-4 gap-x-4">
         {/* getting started */}
         <div>
-          <div className="text-xl font-bold">Getting Started</div>
+          <div className="text-xl font-bold">🚀 Getting Started</div>
           <hr className="h-px my-1 w-[250px] bg-gray-200 border-0 dark:bg-gray-700"></hr>
           <div className="text-base flex flex-col gap-2">
             <p>1. Add Scuttle to your server.</p>
@@ -43,7 +43,7 @@ function AboutCard() {
         </div>
         {/* how it works */}
         <div>
-          <div className="text-xl font-bold">How it Works</div>
+          <div className="text-xl font-bold">ℹ️ How it Works</div>
           <hr className="h-px my-1 w-[250px] bg-gray-200 border-0 dark:bg-gray-700"></hr>
           <div className="text-base flex flex-col gap-2">
             <p>

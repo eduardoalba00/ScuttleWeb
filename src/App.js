@@ -214,7 +214,7 @@ export default function App() {
             <div className="grid grid-rows-2 gap-3">
               {/* top bubble */}
               <div className="bg-green-300 rounded-xl p-6 row-span-3 flex flex-col h-fit">
-                {/* heading */}``
+                {/* heading */}
                 <div className="text-5xl sm:text-7xl lg:text-7xl xl:text-7xl font-bold">
                   Scuttle🪴
                 </div>

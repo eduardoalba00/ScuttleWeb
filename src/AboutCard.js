@@ -31,7 +31,7 @@ function AboutCard() {
             <p>
               3. Add summoners to your Guild using{" "}
               <span className="font-bold">
-                /summoners add &#123;Name&#125; #&#123;Tag&#125;
+                /summoners add &#123;Name&#125; &#123;#Tag&#125;
               </span>
             </p>
 

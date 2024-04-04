@@ -48,6 +48,12 @@ const commands = [
     example: "!summoners add Username #NA1",
     demoUrl: "./assets/summoners_add_demo.gif",
   },
+  {
+    name: "🎮summoners remove {RIOT ID}",
+    description: "Removes a summoner to your Guild",
+    example: "!summoners remove Username #NA1",
+    demoUrl: "./assets/summoners_remove.gif",
+  },
 ];
 
 function Commands({ screenSize }) {

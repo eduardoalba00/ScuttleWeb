@@ -10,7 +10,7 @@ const commands = [
     {
         name: "📈stats daily {RIOT ID}",
         description: "Displays daily stats for Riot ID specified",
-        example: "/stats Username NA1",
+        example: "/stats daily Username NA1",
         demoUrl: "./assets/stats_demo.gif",
     },
     {
@@ -50,7 +50,7 @@ const commands = [
     },
     {
         name: "🎮summoners remove {RIOT ID}",
-        description: "Removes a summoner to your Guild",
+        description: "Removes a summoner from your Guild",
         example: "/summoners remove Username NA1",
         demoUrl: "./assets/summoners_remove.gif",
     },

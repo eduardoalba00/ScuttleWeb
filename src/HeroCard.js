@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const apiUrl =
   process.env.NODE_ENV == "prod"
-    ? "https://scuttle-api-db0e0e763362.herokuapp.com/"
+    ? "https://scuttle-api-db0e0e763362.herokuapp.com"
     : "http://localhost:4000";
 
 function HeroCard() {

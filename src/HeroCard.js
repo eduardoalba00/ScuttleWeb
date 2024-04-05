@@ -2,8 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const apiUrl =
-  process.env.NODE_ENV === "prod"
-    ? "https://scuttle-api-db0e0e763362.herokuapp.com"
+  process.env.NODE_ENV === "production"
+    ? "https://api.scuttle.gg"
     : "http://localhost:4000";
 
 function HeroCard() {
@@ -21,7 +21,6 @@ function HeroCard() {
       setNumCommands(commandsResponse.data.numCommandsSent);
     }
     getAnalytics();
-    console.log(process.env.NODE_ENV);
   }, []);
 
   return (

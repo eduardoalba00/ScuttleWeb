@@ -5,7 +5,7 @@ import HeroCard from "./HeroCard";
 import ResourcesCard from "./ResourcesCard";
 import AboutCard from "./AboutCard";
 import Commands from "./Commands";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 export default function App() {
   const [screenSize, setScreenSize] = useState({

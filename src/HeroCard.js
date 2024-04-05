@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const apiUrl =
-  process.env.NODE_ENV == "prod"
+  process.env.NODE_ENV === "prod"
     ? "https://scuttle-api-db0e0e763362.herokuapp.com"
     : "http://localhost:4000";
 

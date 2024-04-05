@@ -21,6 +21,7 @@ function HeroCard() {
       setNumCommands(commandsResponse.data.numCommandsSent);
     }
     getAnalytics();
+    console.log(process.env.NODE_ENV);
   }, []);
 
   return (

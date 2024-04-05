@@ -10,19 +10,19 @@ const commands = [
   {
     name: "📈stats daily {RIOT ID}",
     description: "Displays daily stats for Riot ID specified",
-    example: "!stats Username #NA1",
+    example: "!stats Username NA1",
     demoUrl: "./assets/stats_demo.gif",
   },
   {
     name: "📈stats weekly {RIOT ID}",
     description: "Displays weekly stats for Riot ID specified",
-    example: "!stats weekly Username #NA1",
+    example: "!stats weekly Username NA1",
     demoUrl: "./assets/stats_weekly_demo.gif",
   },
   {
     name: "📈stats monthly {RIOT ID}",
     description: "Displays monthly stats for Riot ID specified",
-    example: "!stats monthly Username #NA1",
+    example: "!stats monthly Username NA1",
     demoUrl: "./assets/stats_monthly_demo.gif",
   },
   {
@@ -45,13 +45,13 @@ const commands = [
   {
     name: "🎮summoners add {RIOT ID}",
     description: "Adds a summoner to your Guild",
-    example: "!summoners add Username #NA1",
+    example: "!summoners add Username NA1",
     demoUrl: "./assets/summoners_add_demo.gif",
   },
   {
     name: "🎮summoners remove {RIOT ID}",
     description: "Removes a summoner to your Guild",
-    example: "!summoners remove Username #NA1",
+    example: "!summoners remove Username NA1",
     demoUrl: "./assets/summoners_remove.gif",
   },
 ];

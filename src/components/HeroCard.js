@@ -49,7 +49,7 @@ function HeroCard() {
         </p>
         <img
           className="h-36 md:h-44 mx-auto hover:scale-110 hover:cursor-pointer"
-          src={require("./assets/scuttle_cropped.png")}
+          src={require("../assets/scuttle_cropped.png")}
           alt="Scuttle Logo"
         />
       </div>

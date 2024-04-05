@@ -1,6 +1,6 @@
 function DemoImage({ screenSize }) {
   const backgroundStyle = {
-    backgroundImage: `url(${require("./assets/demo.gif")})`,
+    backgroundImage: `url(${require("../assets/demo.gif")})`,
     backgroundSize: "cover",
     backgroundPosition: "left bottom",
     backgroundRepeat: "no-repeat",

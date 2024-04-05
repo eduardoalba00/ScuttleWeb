@@ -42,14 +42,14 @@ function ResourcesCard({ open, setOpen }) {
                     <div
                       className="mx-auto flex flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 h-16 w-16"
                       style={{
-                        backgroundImage: `url(${require("./assets/Eggdud.png")})`,
+                        backgroundImage: `url(${require("../assets/Eggdud.png")})`,
                         backgroundSize: "cover",
                         backgroundPosition: "left bottom",
                         backgroundRepeat: "no-repeat",
                       }}
                     >
                       <image
-                        src="./assets/Eggdud.png"
+                        src="../assets/Eggdud.png"
                         alt="Eggdud"
                         className="object-fit"
                       />

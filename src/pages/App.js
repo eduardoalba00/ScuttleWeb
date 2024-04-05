@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import Footer from "./Footer";
-import DemoImage from "./DemoImage";
-import HeroCard from "./HeroCard";
-import ResourcesCard from "./ResourcesCard";
-import AboutCard from "./AboutCard";
-import Commands from "./Commands";
+import Footer from "../components/Footer";
+import DemoImage from "../components/DemoImage";
+import HeroCard from "../components/HeroCard";
+import ResourcesCard from "../components/ResourcesCard";
+import AboutCard from "../components/AboutCard";
+import Commands from "../components/Commands";
 import { Helmet } from "react-helmet-async";
 
 export default function App() {

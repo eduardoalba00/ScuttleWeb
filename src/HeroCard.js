@@ -15,8 +15,6 @@ function HeroCard() {
       const guildsResponse = await axios.get(`${apiUrl}/guilds`);
       const commandsResponse = await axios.get(`${apiUrl}/commands`);
 
-      console.log(guildsResponse);
-
       setNumGuilds(guildsResponse.data.numGuilds);
       setNumCommands(commandsResponse.data.numCommandsSent);
     }
